@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-import connectMongo from "../config/mongo.js";
+import connectMongo from "../config/mongodb.js";
 import Product from "../models/product.js";
 
 const seedProducts = async () => {

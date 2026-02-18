@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import sequelize from "../config/mysql.js";
+import sequelize from "../config/sequelize.js";
 import User from "../models/user.js";
 
 const seedUsers = async () => {
@@ -25,9 +25,9 @@ const seedUsers = async () => {
   }
 };
 
-console.log(process.env.DATABASE_MYSQL);
-console.log(process.env.USER_MYSQL);
-console.log(process.env.PASS_MYSQL);
-console.log(process.env.HOST_MYSQL);
+console.log(process.env.DATABASE_PG);
+console.log(process.env.USER_PG);
+console.log(process.env.PASS_PG);
+console.log(process.env.HOST_PG);
 
 seedUsers();
