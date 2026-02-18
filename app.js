@@ -4,6 +4,11 @@ import sequelize from "./src/config/sequelize.js";
 import redis from "./src/config/redis.js"
 import {uri, mongoose} from "./src/config/mongodb.js"
 
+console.log(process.env.DATABASE_PG);
+console.log(process.env.USER_PG);
+console.log(process.env.PASS_PG);
+console.log(process.env.HOST_PG);
+
 const app = express();
 app.use(express.json());
 
