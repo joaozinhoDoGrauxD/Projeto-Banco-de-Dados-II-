@@ -1,8 +1,6 @@
 import { createClient} from 'redis';
 import dotenv from "dotenv";
 
-dotenv.config({ path: "./.env" });
-
 const port = process.env.PORT_REDIS;
 const host = process.env.HOST_REDIS;
 const user = process.env.USERNAME_REDIS;
@@ -13,3 +11,5 @@ const redis = await createClient({
 });
 
 export default redis;
+
+
