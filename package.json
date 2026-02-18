@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "seed:users": "node src/seed/seedUsers.js", 
+    "seed:users": "node src/seed/seedUsers.js",
     "seed:products": "node src/seed/seedProducts.js"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "mongodb": "^7.1.0",
     "mongoose": "^9.2.0",
     "mysql2": "^3.16.3",
+    "pg": "^8.18.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "redis": "^5.10.0",
