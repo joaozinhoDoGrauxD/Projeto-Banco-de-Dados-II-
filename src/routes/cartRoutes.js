@@ -1,10 +1,10 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const { addToCart, viewCart } = require('../controllers/cartController');
-const auth = require('../middleware/authMiddleware');
-const role = require('../middleware/roleMiddleware');
+import { addToCart, viewCart } from '../controllers/cartController.js';
+import auth from '../middleware/authMiddleware.js';
+import role from '../middleware/roleMiddleware.js';
 
 router.post('/', auth, role(['user']), addToCart);
 router.get('/', auth, role(['user']), viewCart);
 
-module.exports = router;
+export default router

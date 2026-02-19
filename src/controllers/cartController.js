@@ -1,6 +1,6 @@
-const Cart = require('../models/cart');
+import Cart from '../models/cart.js';
 
-exports.addToCart = async (req, res) => {
+export const addToCart = async (req, res) => {
   const { productId, quantity } = req.body;
   const userId = req.user.id;
 
@@ -15,8 +15,9 @@ exports.addToCart = async (req, res) => {
   res.json(cart);
 };
 
-exports.viewCart = async (req, res) => {
+export const viewCart = async (req, res) => {
   const userId = req.user.id;
   const cart = await Cart.findOne({ userId }).populate('items.productId');
   res.json(cart);
 };
+

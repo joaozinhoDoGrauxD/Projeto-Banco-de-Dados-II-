@@ -3,9 +3,13 @@ import 'dotenv/config';
 import sequelize from "./src/config/sequelize.js";
 import redis from "./src/config/redis.js"
 import {uri, mongoose} from "./src/config/mongodb.js"
+import products from "./src/routes/productRoutes.js"
+import cart from "./src/routes/cartRoutes.js"
+import auth from  "./src/routes/authRoutes.js"
 
 const app = express();
 app.use(express.json());
+
 
 async function databaseConnect(callback, database){
     try{
@@ -19,5 +23,9 @@ async function databaseConnect(callback, database){
 databaseConnect(sequelize.sync(), 'Postgres');
 databaseConnect(redis.connect(), 'Redis');
 databaseConnect(mongoose.connect(uri), 'MongoDB');
+
+app.use("/api/auth", auth)
+app.use("/api/products", products)
+app.use("/api/cart", cart)
 
 export default app;
