@@ -1,10 +1,11 @@
+import 'dotenv/config'
 import bcrypt from "bcrypt";
 import sequelize from "../config/sequelize.js";
 import User from "../models/user.js";
 
 const seedUsers = async () => {
   try {
-    await sequelize.sync({ force: true }); // recria tabelas
+    await sequelize.sync({force : true}); 
 
     const users = [
       { username: "admin", password: "admin123", role: "admin" },
@@ -24,10 +25,5 @@ const seedUsers = async () => {
     process.exit(1);
   }
 };
-
-console.log(process.env.DATABASE_PG);
-console.log(process.env.USER_PG);
-console.log(process.env.PASS_PG);
-console.log(process.env.HOST_PG);
 
 seedUsers();

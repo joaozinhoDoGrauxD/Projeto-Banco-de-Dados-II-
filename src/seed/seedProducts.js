@@ -1,11 +1,13 @@
-import connectMongo from "../config/mongodb.js";
+import 'dotenv/config'
+import {uri, mongoose} from "../config/mongodb.js";
 import Product from "../models/product.js";
 
 const seedProducts = async () => {
   try {
-    await connectMongo();
 
-    await Product.deleteMany({}); // limpa coleção
+    await mongoose.connect(uri);
+
+    await Product.deleteMany({}); 
 
     const products = [
       { name: "Notebook Dell", price: 3500, quantity: 10 },
