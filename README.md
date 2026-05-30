@@ -108,7 +108,7 @@ git clone https://github.com/seuusuario/loja-roupas.git
 
 2️⃣ Instalar dependências
 
-npm install
+bun install
 
 3️⃣ Criar arquivo .env
 
@@ -147,19 +147,19 @@ MongoDB cria automaticamente ao conectar.
 
 5️⃣ Rodar Seeds
 
-npm run seed:users
-npm run seed:products
+bun run seed:users
+bun run seed:products
 
 ▶️ Rodando o Projeto
 
 Backend
-npm run start
+bun run start
 
 Servidor rodando em:
 
 http://localhost:5000
 Frontend
-npm run dev
+bun run dev
 
 Aplicação rodando em:
 
@@ -168,13 +168,13 @@ http://localhost:5173
 🔄 Scripts Disponíveis
 
 Script	Descrição
-npm run dev	Inicia frontend com Vite
-npm run build	Build de produção
-npm run preview	Preview do build
-npm run start	Inicia backend
-npm run seed:users	Popula usuários
-npm run seed:products	Popula produtos
-npm run lint	Roda ESLint
+bun run dev	Inicia frontend com Vite
+bun run build	Build de produção
+bun run preview	Preview do build
+bun run start	Inicia backend
+bun run seed:users	Popula usuários
+bun run seed:products	Popula produtos
+bun run lint	Roda ESLint
 
 🔐 Autenticação
 

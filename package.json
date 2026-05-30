@@ -7,10 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "start": "node ./backend/server.js",
+    "start": "bun ./backend/server.js",
     "preview": "vite preview",
-    "seed:users": "node ./backend/seed/seedUsers.js",
-    "seed:products": "node ./backend/seed/seedProducts.js"
+    "seed:users": "bun ./backend/seed/seedUsers.js",
+    "seed:products": "bun ./backend/seed/seedProducts.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.993.0",
